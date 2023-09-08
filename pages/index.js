@@ -75,7 +75,7 @@ export default function Home(props) {
 
         {coffeeStores.length > 0 && (
           <div className={styles.sectionWrapper}>
-            <h2 className={styles.heading2}>Stores Near Me</h2>
+            <h2 className={styles.heading2}>Shop Near Me</h2>
             <div className={styles.cardLayout}>
               {coffeeStores.map((coffeeStores) => {
                 return (
@@ -94,7 +94,7 @@ export default function Home(props) {
 
         {props.coffeeStores.length > 0 &&
           <div className={styles.sectionWrapper}>
-            <h2 className={styles.heading2}>San Diego Stores</h2>
+            <h2 className={styles.heading2}>San Diego Shops</h2>
             <div className={styles.cardLayout}>
               {props.coffeeStores.map((coffeeStores) => {
                 return (
