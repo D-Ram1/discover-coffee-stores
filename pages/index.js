@@ -70,7 +70,7 @@ export default function Home(props) {
         {coffeeStoresError && <p>Something went wrong: {coffeeStoresError}</p>}
         <div className={styles.heroImage}>
           <Image
-            src="/../public/static/hero-image.png"
+            src="/static/hero-image.png"
             priority={true}
             width={700}
             height={400}
