@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
+import Head from "next/head";
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Banner from '../components/banner';
@@ -55,8 +56,12 @@ export default function Home(props) {
 
   return (
     <div>
-      <title>Coffee Connoisseur</title>
-      <link rel="icon" href="/favicon.ico" />
+      <Head>
+        <title>Coffee Connoisseur</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="allows you to discover coffee stores"></meta>
+      </Head>
+
       <main>
         <Banner buttonText={isFindingLocation ? "Locating..." : "View Stores Nearby"}
           handleOnClick={handleOnBannerBtnClick}
@@ -66,10 +71,10 @@ export default function Home(props) {
         <div className={styles.heroImage}>
           <Image
             src="/../public/static/hero-image.png"
-            alt="coffee image"
             priority={true}
             width={700}
-            height={400}>
+            height={400}
+            alt="hero image">
           </Image>
         </div>
 
