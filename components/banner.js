@@ -9,7 +9,9 @@ const Banner = (props) => {
             </h1>
             <p className={styles.subTitle}>Discover your local coffee shops!</p>
             <div className={styles.buttonWrapper}>
-                <button className={styles.button}>View Stores Nearby</button>
+                <button className={styles.button} onClick={props.handleOnClick}>
+                    {props.buttonText}
+                </button>
             </div>
         </div >
     );

@@ -4,7 +4,7 @@ const createCoffeeStore = async (req, res) => {
     if (req.method === "POST") {
         //find a record
 
-        const { id, name, neighbourhood, address, imgUrl, voting } = req.body;
+        const { id, name, neighborhood, address, imgUrl, voting } = req.body;
 
         try {
             if (id) {
@@ -21,7 +21,7 @@ const createCoffeeStore = async (req, res) => {
                                     id,
                                     name,
                                     address,
-                                    neighbourhood,
+                                    neighborhood,
                                     voting,
                                     imgUrl,
                                 },
