@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import React from "react";
 
 import { useRouter } from "next/router";
 import Link from 'next/link';
@@ -49,6 +49,7 @@ export async function getStaticPaths() {
 }
 
 const CoffeeStore = (initialProps) => {
+    const { useEffect, useState, useContext } = React;
     const router = useRouter();
 
     const id = router.query.id;
@@ -126,7 +127,7 @@ const CoffeeStore = (initialProps) => {
 
     const handleUpVoteButton = async () => {
         try {
-            const response = await fetch('/api/upVoteCoffeeStorebyId', {
+            const response = await fetch('/api/upVoteCoffeeStoreById', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
